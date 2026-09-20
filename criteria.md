@@ -25,6 +25,7 @@ contains the answer.
 **Why this target:**
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." -->
+My corpus contains several different advice topics, and some answers only appear in one thread. I chose 4 out of 5 because retrieval may occasionally rank a related thread above the exact one, but I still expect the correct chunk to be retrieved for most questions.
 
 ---
 
@@ -35,6 +36,7 @@ Every answer the system produces names at least one source document.
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
+Each chunk in my corpus keeps its source filename, such as thread_bike_commute.txt or thread_laptop_specs.txt, so the system should always have source information available when answering an in-scope question. If an answer does not include a source, that would mean the source metadata was lost or not used correctly.
 
 ---
 
@@ -68,10 +70,10 @@ in at least 4 of 5 tries.
           sentence cut in half at either end."
        - "No chunk is shorter than 200 characters, since anything below that
           in my corpus turned out to be a heading with no content under it." -->
-
-
+At least 4 of 5 randomly sampled chunks should contain a complete thread or reply without cutting a sentence or reply in half. 
 
 **Why this target:**
+My corpus contains question-and-answer threads where important information may be spread across several replies. The chunks I inspected usually preserved the entire thread and its replies, so I expect most chunks to remain understandable on their own. I did not require all 5 because longer threads may eventually need to be split.
 
 
 
@@ -86,11 +88,11 @@ in at least 4 of 5 tries.
      handles badly, about source attribution being correct rather than merely
      present — anything, as long as it names a number or an observable
      outcome. -->
-
+For at least 4 of my 5 test questions, the final answer should give information that is supported by the retrieved source and should not introduce facts that do not appear in the corpus.
 
 
 **Why this target:**
-
+The purpose of my system is to answer questions using the student advice documents rather than general knowledge. Since the corpus is small and the test questions have specific answers, I expect most answers to stay grounded in the retrieved text, while allowing one possible failure from imperfect retrieval or generation.
 
 
 ---
