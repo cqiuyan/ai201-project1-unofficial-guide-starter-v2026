@@ -73,8 +73,7 @@ in at least 4 of 5 tries.
 At least 4 of 5 randomly sampled chunks should contain a complete thread or reply without cutting a sentence or reply in half. 
 
 **Why this target:**
-My corpus contains question-and-answer threads where important information may be spread across several replies. The chunks I inspected usually preserved the entire thread and its replies, so I expect most chunks to remain understandable on their own. I did not require all 5 because longer threads may eventually need to be split.
-
+My corpus consists of advice threads where each reply usually represents one complete opinion or piece of advice. Splitting at reply boundaries should preserve those ideas better than fixed character windows, while repeating the thread question keeps each chunk understandable on its own.
 
 
 ---
