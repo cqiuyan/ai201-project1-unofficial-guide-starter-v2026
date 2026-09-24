@@ -301,9 +301,9 @@ For heavy CS assignments, students recommend using the lab machines, which exist
 
 ## The Improvement
 
-**What I changed:**
+**What I changed:** top-k from 5 to 3 in config.py
 
-**Why I picked it:**
+**Why I picked it:** My first evaluation met all five acceptance criteria, but Criterion 1 was relatively forgiving because retrieval returned five chunks for every question. I decided to reduce top-k from 5 to 3 so that the system provides fewer irrelevant chunks while still trying to retrieve the information needed to answer each question. This tests whether the relevant information is ranked near the top rather than simply appearing somewhere among five results.
 
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->
@@ -315,11 +315,11 @@ For heavy CS assignments, students recommend using the lab machines, which exist
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Chunks preserve complete ideas | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. Answers stay grounded in the corpus | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
 **Did it help?**
 
@@ -329,6 +329,8 @@ For heavy CS assignments, students recommend using the lab machines, which exist
      tell.
 
      Milestone 4. -->
+     Yes. Reducing top-k from 5 to 3 kept all five criteria at the same passing results, while making retrieval more focused. For example, the RAM question previously retrieved several unrelated sources, but after the change it returned only thread_laptop_specs.txt, which contained the answer. Because the scores stayed at 5/5 while fewer irrelevant chunks were returned, the change improved retrieval precision without hurting accuracy.
+
 
 ## What's Still Broken
 
@@ -339,6 +341,7 @@ For heavy CS assignments, students recommend using the lab machines, which exist
      not.
 
      Milestone 5. -->
+
 
 ## What I'd Do Differently
 
