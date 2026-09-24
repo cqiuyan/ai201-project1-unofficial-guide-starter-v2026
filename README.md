@@ -297,7 +297,7 @@ For heavy CS assignments, students recommend using the lab machines, which exist
 
      I did not miss any of my five acceptance criteria, so there was no specific pipeline failure to diagnose. However, some of my targets were relatively safe because my corpus is small and my test questions were written directly from information I knew was present in the documents.
 
-     If I were to make one criterion stricter, I would tighten Criterion 1. Instead of requiring the answer to appear somewhere in the retrieved chunks for at least 4 of 5 questions, I would require the answer to appear within the top three retrieved chunks for all 5 questions. This would test retrieval quality more directly by checking whether the correct information is ranked near the top instead of simply appearing somewhere in the top five results.
+     If I were to make one criterion stricter, I would tighten Criterion 1. Instead of requiring the answer to appear somewhere in the retrieved chunks for at least 4 of 5 questions, I would require the answer to appear within the top three retrieved chunks for all 5 questions. This would test retrieval quality more directly by checking whether the correct information is ranked near the top instead of simply appearing somewhere in the top five results. 
 
 ## The Improvement
 
