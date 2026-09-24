@@ -24,7 +24,7 @@ names a target of "4 of 5", and four of three is not a thing.
 QUESTIONS = [
     # {"question": "...", "expects": "..."},
     {"question": "How much RAM do students recommend for a laptop used in CS courses", "expects": "16GB"},
-    {"question": "How long can a bike reduce an 30-minute walk commute to?", "expects": "15 minutes"},
+    {"question": "How long can a bike reduce an 18-minute walk commute to?", "expects": "6 minutes"},
     {"question": "Why do some students avoid biking between the months of November and January?", "expects": "snowy"},
     {"question": "What financial support is available for first-generation students for textbooks and travel?", "expects": "emergency fund"},
     {"question": "What do students recommend doing for heavy CS assignments if a personal laptop is not powerful enough?", "expects": "lab machines"},

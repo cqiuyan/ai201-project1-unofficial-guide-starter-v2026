@@ -201,12 +201,57 @@ There was a clear gap between the highest in-scope distance, 0.508, and the lowe
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Chunks preserve complete ideas | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. Answers stay grounded in the corpus | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
+### Criterion 1 — Retrieved chunks contain the answer
+File: `results/run_2026-09-23_1936_before.md`  
+Function: `run_eval.py::main`
+```text
+How much RAM do students recommend for a laptop used in CS courses — run 1
+Best distance: 0.1496 (passed the gate)
+Sources retrieved: thread_first_gen.txt, thread_laptop_specs.txt, thread_pass_fail.txt
+
+Students recommend 16GB of RAM for a laptop used in CS courses (thread_laptop_specs.txt).
+```
+
+### Criterion 2 — Every answer names a source
+File: `results/run_2026-09-23_1936_before.md`  
+Function: `run_eval.py::main`
+```text
+An emergency fund exists for textbooks and travel that is not means-tested beyond completing a short form.
+This information comes from thread_first_gen.txt.
+```
+
+### Criterion 3 — Gate stops out-of-corpus questions
+File: `results/run_2026-09-23_1936_before.md`  
+Function: `run_eval.py::check_out_of_scope`
+```text
+What is the capital of Mongolia? | 0.893 | refused
+How do I change the oil in a diesel engine? | 0.896 | refused
+Who won the 1994 World Cup? | 0.893 | refused
+What is the recommended dosage of ibuprofen for a headache? | 0.807 | refused
+How do I write a for loop in Rust? | 0.835 | refused
+```
+
+### Criterion 4 — Chunks preserve complete ideas
+File: output from `python app.py --corpus advice_threads chunks`  
+Function: `chunker.py::split_documents`
+```text
+THREAD: Is a bike worth it for a 20 minute walk commute?
+--- reply 1 (14 votes) ---
+Yeah. Cuts an 18 minute walk to about 6. The thing nobody mentions is storage — covered bike parking exists at three buildings and is full by 9am at all three.
+```
+
+### Criterion 5 — Answers stay grounded in the corpus
+File: `results/run_2026-09-23_1936_before.md`  
+Function: `run_eval.py::main`
+```text
+For heavy CS assignments, students recommend using the lab machines, which exist and are better than anything you can buy (thread_laptop_specs.txt).
+```
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. -->
