@@ -341,6 +341,7 @@ For heavy CS assignments, students recommend using the lab machines, which exist
      not.
 
      Milestone 5. -->
+     None of my original acceptance criteria were still missed after the change. However, the current tests are limited because the five questions were written directly from information known to exist in the corpus. The system could still struggle with differently worded or more ambiguous questions that were not included in this evaluation.
 
 
 ## What I'd Do Differently
@@ -349,3 +350,5 @@ For heavy CS assignments, students recommend using the lab machines, which exist
      differently, and why?
 
      Milestone 5. -->
+     I would make Criterion 1 stricter. Instead of requiring the answer to appear somewhere in the retrieved chunks for at least 4 of 5 questions, I would require the correct answer to appear within the top three retrieved chunks for all 5 questions. My original criterion was fairly easy to meet with top-k = 5, so the stricter version would better measure whether retrieval ranks the most useful chunks near the top.
+
