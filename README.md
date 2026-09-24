@@ -269,11 +269,11 @@ For heavy CS assignments, students recommend using the lab machines, which exist
 
 | # | Criterion | Verdict | How I decided |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Retrieved chunks contain the answer | MET | All 5 test questions retrieved a chunk containing the expected answer, which is above the target of 4 of 5. |
+| 2 | Every answer names a source | MET | All 5 answers named at least one source document in each of the three runs, meeting the 5 of 5 target. |
+| 3 | Gate stops out-of-corpus questions | MET | The relevance gate refused all 5 out-of-scope questions, exceeding the target of 4 of 5. |
+| 4 | Chunks preserve complete ideas | MET | At least 4 of the 5 sampled chunks contained a complete reply and thread question without cutting a sentence or reply in half. |
+| 5 | Answers stay grounded in the corpus | MET | All 5 test answers were supported by the retrieved documents and did not add unsupported information, exceeding the target of 4 of 5. |
 
 ## Diagnoses
 
